@@ -1,0 +1,21 @@
+a=input('a:');
+b=input('b:');
+c=input('c:');
+string=[num2str(a) 'x^2+' num2str(b) 'x+' num2str(c) '=0'];
+disp(string);
+delta=b^2-4*a*c;
+if(delta>0)
+    x1=(-b+sqrt(delta))/(2*a);
+    x2=(-b-sqrt(delta))/(2*a);
+    fprintf('x1=%f\n',x1);
+    fprintf('x2=%f\n',x2);
+elseif(delta==0)
+    x=-b/(2*a);
+    fprintf('x1=%f\n',x);
+    fprintf('x2=%f\n',x);
+else
+    realpart=-b/(2*a);
+    imagpart=sqrt(abs(delta))/(2*a);
+    fprintf('x1=%f+%fi\n',realpart,imagpart);
+    fprintf('x2=%f-%fi\n',realpart,imagpart);
+end;
